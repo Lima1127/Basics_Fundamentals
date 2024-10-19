@@ -23,7 +23,12 @@ public class Challenger {
 
 
         while (access){
-            System.out.println("Operações\n1- Consultar Saldo\n2- Sacar dinheiro\n3- Depositar\n4- Sair");
+            System.out.println("""
+                    ---Operações---
+                    1- Consultar Saldo
+                    2- Sacar dinheiro
+                    3- Depositar
+                    4- Sair""");
             operation = sc.nextInt();
             switch (operation){
                 case 1 :

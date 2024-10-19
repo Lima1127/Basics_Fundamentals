@@ -11,19 +11,22 @@ public class GuessGame {
         while(count < 5){
             System.out.println("tente acertar o numero:");
             numberUser = sc.nextInt();
+            count++;
+
 
             if(numberUser < numberRandom){
                 System.out.println("Você errou. Tente um número maior.");
-                count++;
             } else if (numberUser > numberRandom) {
                 System.out.println("Você errou. Tente um número menor.");
-                count++;
             } else {
                 System.out.println("Parabens. Você ganhou.");
-                System.exit(0);
+                break;
             }
 
         }
-        System.out.println("Você perdeu.");
+        if (count == 5 && numberUser != numberRandom){
+            System.out.println("Você não tem mais tentativas. Você perder.");
+
+        }
     }
 }
